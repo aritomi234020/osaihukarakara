@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <img src="man.png" id="hair" style="position:absolute; top:350px; left:250px;width:199px; cursor:hand;">
+    <img src="hair.png" id="hairImg" style="position:absolute; top:355px; left:330px; cursor:hand;">
+    <img src="newhair.png" id="newhairImg" style="position:absolute; top:315px; left:328; visibility:hidden;">
+<br>
+    <button>送信</button>
+    <form name="contactform" action="#">
+        <p>お使いのOS<br>
+            <input type="checkbox" name="winos" value="win7">Windows7 
+            <input type="checkbox" name="winos" value="win8">Windows8
+            <input type="checkbox" name="winos" value="win10">Windows10
+            <input type="checkbox" name="macos" value="mac">Mac
+            <input type="checkbox" name="linuxos" value="linux">Linux
+        </p>
+        <button type="button" onclick="showDialog()">選択を表示</button>
+    </form>
+   
+   
+</head>
+<body>
+    <div class="daiyarogu">
+        <h1>テキストボックスとダイアログボックス</h1>
+        <input type="text" id="inputBox" placeholder="ここに入力">
+        <button onclick="showDialog()">表示</button>
+    </div>
+    <script>
+        function showSelectedOption() {
+            // 選択されたオプションを取得
+            const selectedOption = document.querySelector('input[name="option"]:checked');
+            
+            // 選択されたオプションの値をダイアログボックスに表示
+            if (selectedOption) {
+                alert("選ばれた項目: " + selectedOption.value);
+            } else {
+                alert("項目が選ばれていません");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>オプションを選んでください</h1>
+
+    <label>
+        <input type="radio" name="option" value="オプション1"> オプション1
+    </label><br>
+
+    <label>
+        <input type="radio" name="option" value="オプション1"> オプション1
+    </label><br>
+
+    </label>
+        <input type="radio" name="option" value="オプション1"> オプション1
+    </label><br>
+
+    <label>
+        <input type="radio" name="option" value="オプション2"> オプション2
+    </label><br><br>
+
+    <button onclick="showSelectedOption()">選択項目を表示</button>
+  </body>
+</html>
